@@ -40,11 +40,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 /* Images */
@@ -226,6 +226,81 @@ main {
   margin: 30px auto;
 }
 
+/* Homepage */
+.featuredContainer {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  overflow: hidden;
+  margin: 15px 0 20px 0;
+}
+
+.featuredGamesContainer {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.featured__left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.orangeBox {
+  background: #e15931;
+  color: #fff;
+  padding: 22px;
+  text-align: center;
+  margin: 0 10% 10px 0;
+}
+
+.orangeBox:last-child {
+  margin-bottom: 0;
+}
+
+.featured__right {
+  width: 70%;
+}
+
+.featured__right img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+
+/* Cards */
+.featuredCard4Col {
+  width: 23%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.featuredCard4Col p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5px 13px 0;
+}
+
+.featuredCard4Col img {
+  height: 200px;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.featuredCard4Col:last-child {
+  margin-right: 0;
+}
+
+
 /* Footer */
 footer {
   width: 100%;
@@ -257,34 +332,34 @@ footer p {
 }
 
 @media (max-width: 699px) {
-.searchBox input {
-  width: 100px;
-}
+  .searchBox input {
+    width: 100px;
+  }
 
-.logo {
-  width: 280px;
-}
+  .logo {
+    width: 280px;
+  }
 
-.userLinks a {
-  padding: 7px 15px;
-  font-size: 0.9rem;
-  border-radius: 100px;
-}
+  .userLinks a {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+    border-radius: 100px;
+  }
 
-.topContainer {
-  flex-direction: column;
-}
+  .topContainer {
+    flex-direction: column;
+  }
 
-.topContainer__right {
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 20px 0;
-  width: 100%;
-}
+  .topContainer__right {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0;
+    width: 100%;
+  }
 
-.mobileNav {
-  margin-top: 5px;
-}
+  .mobileNav {
+    margin-top: 5px;
+  }
 }
 
 @media (min-width: 580px) and (max-width: 999px) {
@@ -301,6 +376,39 @@ footer p {
 
   nav {
     display: none;
+  }
+
+  .featuredContainer, .featuredGamesContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+  .featuredCard4Col {
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  .featuredCard4Col img {
+    height: 200px;
+  }
+
+  .featured__left, .featured__right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .orangeBox {
+    margin: 5px 0;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 950px) {
+  .featuredCard4Col {
+    width: 47%;
+    margin: 0 1% 20px;
+    text-align: center;
   }
 }
 
