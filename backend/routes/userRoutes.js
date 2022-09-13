@@ -1,7 +1,7 @@
 // Anjileen's Code
 
 import express from 'express';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import User from '../models/userSchema.js';
 import { generateToken } from '../utils.js';
 
