@@ -1,8 +1,10 @@
 // Anjileen's Code
+
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import listingRouter from './routes/listingRoutes.js';
+import userRouter from './routes/userRoutes.js';
 
 // loads environment variables from our .env file
 dotenv.config();
@@ -17,8 +19,13 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 // call the express function and assign to app variable
 const app = express();
 
+// convert form data to JSON object
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // specifies which router to use for certain paths
 app.use('/api/listings', listingRouter);
+app.use('/api/users', userRouter);
 
 // error handling
 app.use((err, req, res, next) => {

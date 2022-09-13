@@ -1,6 +1,6 @@
 // Anjileen's Code
 
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import mongoose from 'mongoose';
 
 // sample data to populate app
