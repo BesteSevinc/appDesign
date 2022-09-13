@@ -1,11 +1,25 @@
 // Anjileen's Code
 
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { Store } from '../Store';
 import SearchBox from './SearchBox';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 // header
 function Header() {
+    // use context
+    const { state, dispatch: ctxDispatch } = useContext(Store);
+    const { userInfo } = state;
+
+    // remove userInfo from local storage on signout
+    const signOutHandler = () => {
+        ctxDispatch({ type: 'USER_SIGNOUT' });
+        localStorage.removeItem('userInfo');
+        window.location.href = '/';
+    };
+
     // states for mobile menu toggle
     const [toggleMenu, setToggleMenu] = useState(false);
     const [displayStyle, setDisplayStyle] = useState({ display: 'none' });
@@ -39,8 +53,24 @@ function Header() {
                     <SearchBox />
                     {/* signup and login links */}
                     <div className="userLinks">
-                        <Link to="/signup">Signup</Link>
-                        <Link to="/signin">Login</Link>
+                        {userInfo ? (
+                            <>
+                                <Link to="/signout" onClick={signOutHandler}>
+                                    Signout
+                                </Link>
+                                <span className="profile">
+                                    <Link to="/profile">
+                                        <FontAwesomeIcon icon={faUser} styke={{ color: '#fff', marginTop: '7px' }} size="xs" className="profileIcon" />
+                                    </Link>
+                                    <Link to="/profile">Profile</Link>
+                                </span>
+                            </>
+                        ) : (
+                            <>
+                                <Link to="/signup">Signup</Link>
+                                <Link to="/signin">Login</Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
@@ -49,7 +79,7 @@ function Header() {
                 <Link to="/">Home</Link>
                 <Link to="/aboutus">About Us</Link>
                 <Link to="/browselistings">Browse</Link>
-                <Link to="/postlisting">Sell</Link>
+                {userInfo ? <Link to="/postlisting">Sell</Link> : <Link to="/signin">Sell</Link>}
                 <Link to="/manuals">Manuals</Link>
             </nav>
 
@@ -64,7 +94,7 @@ function Header() {
                     <Link to="/">Home</Link>
                     <Link to="/aboutus">About Us</Link>
                     <Link to="/browselistings">Browse</Link>
-                    <Link to="/postlisting">Sell</Link>
+                    {userInfo ? <Link to="/postlisting">Sell</Link> : <Link to="/signin">Sell</Link>}
                     <Link to="/manuals">Manuals</Link>
                 </div>
             </div>

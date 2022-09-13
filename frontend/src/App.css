@@ -123,8 +123,8 @@ header a {
 
 /* Search bar */
 .searchBox {
-  margin-right: 15px;
-  width: 70%;
+  margin-right: 5px;
+  width: 65%;
 }
 
 .searchBox input {
@@ -182,15 +182,35 @@ nav li {
   margin: 0 10px;
 }
 
-/* User signup, login links */
+/* User signup, login and profile links */
 .userLinks a {
   border: 2px solid #ccc;
   border-radius: 20px;
   padding: 7px 20px;
+  font-size: 0.9rem;
+  margin-right: 10px;
 }
 
-.userLinks a:first-child {
-  margin-right: 10px;
+.profile a {
+  border: none;
+  padding-right: 0;
+  padding-left: 5px;
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.profileIcon {
+  background: rgb(247, 247, 247);
+  width: 20px;
+  height: 23px;
+  padding: 5px 5px 0;
+  color:#0f1d4d;
+  border-radius: 100%;
+}
+
+
+.svg-inline--fa.fa-xs {
+  vertical-align: middle !important;
 }
 
 /* Mobile navigation */
@@ -417,6 +437,16 @@ footer p {
     padding: 7px 15px;
     font-size: 0.9rem;
     border-radius: 100px;
+  }
+
+  .profile a {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+
+  .profileIcon {
+    width: 15px;
+    height: 18px;
   }
 
   .topContainer {
