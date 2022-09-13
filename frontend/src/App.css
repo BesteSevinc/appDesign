@@ -57,9 +57,28 @@ button {
   cursor: pointer;
 }
 
+.blue {
+  background: #0f1d4d;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
 /* Center text */
 .center {
   text-align: center;
+}
+
+/* Small text */
+.small {
+  font-size: 0.9rem;
+}
+
+/* Underline */
+.underline {
+  text-decoration: underline;
 }
 
 /* Header */
@@ -300,6 +319,60 @@ main {
   margin-right: 0;
 }
 
+/* Login and signup forms */
+form#login {
+  width: 90%;
+  margin: 30px auto 10px;
+  text-align: center
+}
+
+form#signup {
+  width: 100%;
+}
+
+form#login input {
+  width: 40%;
+  display: block;
+  padding: 5px;
+  margin: 7px auto 10px auto;
+}
+
+form#signup input {
+  width: 80%;
+  margin: 7px 0 15px;
+  padding: 5px;
+  display: block;
+}
+
+form#login label, form#signup label {
+  font-size: 0.95rem;
+}
+
+/* Signup Form */
+.signupContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+.signupLeft {
+  width: 90%;
+  margin-right: 10%;
+}
+
+.signupRight {
+  width: 60%;
+}
+
+.lightBlueBox {
+  width: 100%;
+  background: #eaebf5;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 10px 0;
+}
 
 /* Footer */
 footer {
@@ -360,6 +433,10 @@ footer p {
   .mobileNav {
     margin-top: 5px;
   }
+
+  form#login input {
+    width: 80%;
+  }
 }
 
 @media (min-width: 580px) and (max-width: 999px) {
@@ -400,6 +477,22 @@ footer p {
 
   .orangeBox {
     margin: 5px 0;
+  }
+
+  form#login input {
+    width: 60%;
+  }
+
+  .signupLeft, .signupRight {
+    width: 100%;
+  }
+
+  .signupRight {
+    margin-top: 50px;
+  }
+
+  .signupContainer {
+    flex-direction: column;
   }
 
 }
