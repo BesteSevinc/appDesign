@@ -56,7 +56,7 @@ function Header() {
                         {userInfo ? (
                             <>
                                 <Link to="/signout" onClick={signOutHandler}>
-                                    Signout
+                                    Logout
                                 </Link>
                                 <span className="profile">
                                     <Link to="/profile">
