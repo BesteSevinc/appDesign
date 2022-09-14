@@ -60,7 +60,7 @@ function Header() {
                                 </Link>
                                 <span className="profile">
                                     <Link to="/profile">
-                                        <FontAwesomeIcon icon={faUser} styke={{ color: '#fff', marginTop: '7px' }} size="xs" className="profileIcon" />
+                                        <FontAwesomeIcon icon={faUser} size="xs" className="profileIcon" />
                                     </Link>
                                     <Link to="/profile">Profile</Link>
                                 </span>

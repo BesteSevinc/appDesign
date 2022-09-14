@@ -66,6 +66,17 @@ button {
   margin-top: 5px;
 }
 
+.orange {
+  background: #e15931;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  width: 150px;
+  text-align: center;
+  height: 40px;
+}
+
 /* Center text */
 .center {
   text-align: center;
@@ -208,6 +219,15 @@ nav li {
   border-radius: 100%;
 }
 
+.profilePageIcon {
+  background: rgb(224, 224, 224);
+  width: 30px;
+  height: 35px;
+  padding: 5px 5px 0;
+  color:#0f1d4d;
+  border-radius: 100%;
+  margin-right: 10px;
+}
 
 .svg-inline--fa.fa-xs {
   vertical-align: middle !important;
@@ -382,14 +402,34 @@ select:focus {
   border: 1px solid rgb(204, 204, 204);
 }
 
+.featuredCard5Col {
+  width: 16%;
+  margin-right: 4%;
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
 .featuredCard3Col p, .featuredCard4Col p {
   font-size: 1.2rem;
   font-weight: 600;
   padding: 5px 13px 0;
 }
 
+.featuredCard5Col p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .featuredCard3Col img, .featuredCard4Col img {
   height: 200px;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.featuredCard5Col img {
+  height: 120px;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
@@ -452,6 +492,51 @@ form#login label, form#signup label {
   font-weight: 500;
   font-size: 1rem;
   margin: 10px 0;
+}
+
+/* Profile page */
+.dashboardContainer {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.profileTopBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileTopBar h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.profileSubNav {
+  background: #f3f3f3;
+  padding: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px;
+  margin-top: 10px;
+}
+
+.profileSubNavBtn {
+  padding: 15px 30px;
+  background: #e8e8e8;
+  display: inline-block;
+  height: 50px;
+  font-weight: 600;
+}
+
+.editDelBtns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.editDelBtns button {
+  margin-right: 5px;
 }
 
 /* Footer */
@@ -527,6 +612,10 @@ footer p {
   form#login input {
     width: 80%;
   }
+
+  .profileTopBar {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 580px) and (max-width: 999px) {
@@ -545,7 +634,7 @@ footer p {
     display: none;
   }
 
-  .featuredContainer, .featuredGamesContainer {
+  .featuredContainer, .featuredGamesContainer, .dashboardContainer {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
@@ -557,7 +646,7 @@ footer p {
     text-align: center;
   }
 
-  .featuredCard4Col {
+  .featuredCard4Col, .featuredCard5Col {
     width: 75%;
     margin: 10px auto;
   }
@@ -569,6 +658,10 @@ footer p {
   .featured__left, .featured__right {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .dashboardContainer {
+    margin-top: 20px;
   }
 
   .orangeBox {
@@ -604,10 +697,14 @@ footer p {
 }
 
 @media (min-width: 769px) and (max-width: 950px) {
-  .featuredCard3Col, .featuredCard4Col {
+  .featuredCard3Col, .featuredCard4Col, .featuredCard5Col {
     width: 47%;
     margin: 0 1% 20px;
     text-align: center;
+  }
+
+  .dashboardContainer {
+    margin-top: 20px;
   }
 }
 
