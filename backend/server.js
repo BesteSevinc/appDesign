@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import listingRouter from './routes/listingRoutes.js';
 import userRouter from './routes/userRoutes.js';
+import seedRouter from './routes/seedRoutes.js';
 
 // loads environment variables from our .env file
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 // specifies which router to use for certain paths
 app.use('/api/listings', listingRouter);
 app.use('/api/users', userRouter);
+app.use('/api/seed', seedRouter);
 
 // error handling
 app.use((err, req, res, next) => {
