@@ -313,6 +313,58 @@ main {
   width: 100%;
 }
 
+/* Browse Listings */
+.listingsContainer {
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.filterMenus {
+  width: 25%;
+  margin-right: 50px;
+}
+.accordion {
+  width: 80%;
+  margin-bottom: 12px;
+}
+
+.accordion p {
+  font-size: 1.1rem;
+}
+
+.accordionItem {
+  background: #e15931;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.accordionTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sortBy {
+  display: block;
+  width: 100%;
+  float: right;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.sortBy select {
+  float: right;
+  margin-right: 2%;
+  padding: 7px;
+}
+
+select:focus {
+  outline: 0;
+}
+
 /* Cards */
 .featuredCard4Col {
   width: 23%;
@@ -322,20 +374,28 @@ main {
   border: 1px solid rgb(204, 204, 204);
 }
 
-.featuredCard4Col p {
+.featuredCard3Col {
+  width: 31%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.featuredCard3Col p, .featuredCard4Col p {
   font-size: 1.2rem;
   font-weight: 600;
   padding: 5px 13px 0;
 }
 
-.featuredCard4Col img {
+.featuredCard3Col img, .featuredCard4Col img {
   height: 200px;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
 
-.featuredCard4Col:last-child {
+.featuredCard3Col:last-child, .featuredCard4Col:last-child {
   margin-right: 0;
 }
 
@@ -489,14 +549,20 @@ footer p {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-}
+  }
+
+  .featuredCard3Col {
+    width: 100%;
+    margin: 0 0 20px;
+    text-align: center;
+  }
 
   .featuredCard4Col {
     width: 75%;
     margin: 10px auto;
   }
 
-  .featuredCard4Col img {
+  .featuredCard3Col img, .featuredCard4Col img {
     height: 200px;
   }
 
@@ -507,6 +573,16 @@ footer p {
 
   .orangeBox {
     margin: 5px 0;
+  }
+
+  .filterMenus {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .accordion {
+    width: 100%;
   }
 
   form#login input {
@@ -528,7 +604,7 @@ footer p {
 }
 
 @media (min-width: 769px) and (max-width: 950px) {
-  .featuredCard4Col {
+  .featuredCard3Col, .featuredCard4Col {
     width: 47%;
     margin: 0 1% 20px;
     text-align: center;
