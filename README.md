@@ -11,14 +11,14 @@
 </pre>
 **To install backend dependencies**
 <pre>
-5) Open up another terminal
-6) Type: cd backend
-7) Type: npm install
+5) Type: cd backend
+6) Type: npm install
 </pre>
 **To start app**
 <pre>
-8) Type: cd backend
-9) Type: npm start
+7) Type: cd backend
+8) Type: npm start
+9) Open up another terminal
 10) Type: cd frontend 
 11) Type: npm start
 </pre>
