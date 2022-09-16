@@ -10,9 +10,9 @@ const seedRouter = express.Router();
 
 // remove all listings and users, and create new ones from seed data
 seedRouter.get('/', async (req, res) => {
-    await Listing.remove({});
+    await Listing.deleteMany();
     const createdListings = await Listing.insertMany(data.listings);
-    await User.remove({});
+    await User.deleteMany();
     const createdUsers = await User.insertMany(data.users);
     res.send({createdListings, createdUsers});
 });

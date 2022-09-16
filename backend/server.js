@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import listingRouter from './routes/listingRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import seedRouter from './routes/seedRoutes.js';
+import commentRouter from './routes/commentRoutes.js';
 
 // loads environment variables from our .env file
 dotenv.config();
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/listings', listingRouter);
 app.use('/api/users', userRouter);
 app.use('/api/seed', seedRouter);
+app.use('/api/comments', commentRouter);
 
 // error handling
 app.use((err, req, res, next) => {

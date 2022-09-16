@@ -8,6 +8,10 @@ const listingSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        userName: {
+            type: String,
+            required: true,
+        },
         title: {
             type: String,
             required: true,
@@ -49,6 +53,14 @@ const listingSchema = new mongoose.Schema(
             required: true,
         },
         imageid: {
+            type: String,
+            required: true,
+        },
+        phone: {
+            type: String,
+            required: true,
+        },
+        email: {
             type: String,
             required: true,
         },
