@@ -87,6 +87,10 @@ button {
   font-size: 0.9rem;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 /* Underline */
 .underline {
   text-decoration: underline;
@@ -539,6 +543,123 @@ form#login label, form#signup label {
   margin-right: 5px;
 }
 
+/* Single Product Listing */
+.singleListingContainer {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.singleListingCol {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.singleListingCol img {
+  max-width: 80%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.listingTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.editLink {
+  text-decoration: underline;
+  color: #0f1d4d;
+  font-weight: 600;
+}
+
+.listingPrice {
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.categoriesBox {
+  width: auto;
+  max-width: 300px;
+  padding: 15px 30px 15px 15px;
+  font-weight: 500;
+  margin: 20px 0;
+  border: 2px solid #ccc;
+}
+
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.flexRow > div {
+  width: 120px;
+}
+
+.icon {
+  padding: 0 10px;
+}
+
+.completeSet {
+  background: #9ecd9d;
+  padding: 5px 10px;
+  width: 120px;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.userName {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.contactDetails {
+  font-weight: 600;
+  border: 1px solid #e15931;
+  width: 270px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.contactDetails p {
+  font-size: 0.95rem;
+}
+
+.comment {
+  width: 300px;
+  width: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #575757;
+}
+.commentBox {
+  border: 1px solid #a2a2a2;
+  padding: 10px;
+}
+
+.comment p {
+  font-size: 0.8rem;
+  color: #575757;
+}
+
+.commentName {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.singleListingCol textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  padding: 5px;
+  width: 300px;
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -692,6 +813,19 @@ footer p {
 
   .signupContainer {
     flex-direction: column;
+  }
+
+  .singleListingContainer {
+    flex-direction: column;
+  }
+
+  .singleListingCol {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .singleListingCol img {
+    max-width: 100%;
   }
 
 }

@@ -16,6 +16,7 @@ const data = {
     listings: [
         {
             user: '62f9ab7fd165e2174d5d285c',
+            userName: 'Test User',
             title: 'Exploding Kittens',
             slug: 'exploding-kittens',
             description:
@@ -28,9 +29,12 @@ const data = {
             missingPieces: 'no',
             image: '/images/explodingkittens.jpg',
             imageid: 'explodingkittens',
+            phone: '021 321 5678',
+            email: 'johndoe@email.com'
         },
         {
             user: '62f9ab7fd165e2174d5d285c',
+            userName: 'Test User',
             title: 'Monopoly Classic',
             slug: 'monopoly-classic',
             description:
@@ -43,10 +47,13 @@ const data = {
             missingPieces: 'yes',
             image: '/images/monopoly.jpg',
             imageid: 'monopoly',
+            phone: '021 321 5678',
+            email: 'johndoe@email.com'
         },
         {
             user: '62f9ab7fd165e2174d5d285c',
-            title: 'The Lord of the Rings: Journeys in Middle Earth',
+            userName: 'Test User',
+            title: 'The Lord of the Rings',
             slug: 'lord-of-the-rings',
             description:
                 'Brand-new game. Bought this as a gift for my nephew, only to find out that he already owns one! Great gift for The Lord of the Rings fans. Suitable for ages 14+',
@@ -58,9 +65,12 @@ const data = {
             missingPieces: 'no',
             image: '/images/lordoftherings.jpg',
             imageid: 'lordoftherings',
+            phone: '021 321 5678',
+            email: 'johndoe@email.com'
         },
         {
             user: '62f9ab7fd165e2174d5d285c',
+            userName: 'Test User',
             title: 'Herd Mentality',
             slug: 'herd-mentality',
             description: 'Great party game! Used only a handful of times - in great condition.',
@@ -72,6 +82,8 @@ const data = {
             missingPieces: 'no',
             image: '/images/herdmentality.jpg',
             imageid: 'herdmentality',
+            phone: '021 321 5678',
+            email: 'johndoe@email.com'
         },
     ],
 };
