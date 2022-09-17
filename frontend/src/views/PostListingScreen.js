@@ -206,7 +206,7 @@ function PostListingScreen() {
                         <input type="file" accept="image/jpg, image/jpeg, image/png, image/gif" name="file" onChange={onFileChange} />
                     </label>
                     <div className="displayImage">
-                        <img src={previewImage} alt="preview image" />
+                        <img src={previewImage} alt="preview" />
                     </div>
                     <p className="bold underline" style={{ marginBottom: '25px' }}>
                         Contact Details
