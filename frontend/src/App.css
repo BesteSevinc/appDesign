@@ -660,6 +660,114 @@ form#login label, form#signup label {
   width: 300px;
 }
 
+/* Create listing */
+.sellContainer {
+  display: grid;
+  background: #f4f4f4;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+}
+
+.formGroup input {
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+}
+
+.formGroup label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.formGroup textarea {
+  margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #ccc;
+}
+
+input[type=file] {
+  text-align: center;
+ }
+ 
+ label.fileLabel {
+   background: #465095;
+   color: #fff;
+   padding: 10px;
+   width: auto;
+   text-align: center;
+   margin-bottom: 10px;
+ }
+
+ label.fileLabel input {
+  border: 0;
+  margin-bottom: 0;
+ }
+
+ .formGroup select {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 15px;
+ }
+
+ .radioOptions {
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+ }
+
+ .radioOptions > input {
+  margin-bottom: 0;
+ }
+ 
+ .displayImage img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ 
+ .displayImage {
+   background: #f4f4f4;
+   border: 2px solid #ccc;
+   width: 300px;
+   height: 250px;
+   max-width: 400px;
+   max-height: 400px;
+   margin-bottom: 20px;
+ }
+
+ /* Loading spinner */
+ .loader {
+  margin-top: 7px;
+  border: 5px solid #e2e2e2;
+  border-radius: 50%;
+  border-top: 5px solid #465095;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -736,6 +844,15 @@ footer p {
 
   .profileTopBar {
     flex-direction: column;
+  }
+
+  form.sellContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .formGroup {
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 }
 
