@@ -204,7 +204,7 @@ function SingleListingScreen() {
                     )}
 
                     {/* post comment section */}
-                    {comment.comments && (
+                    {comment.comments && userInfo && (
                         <p className="bold" style={{ marginBottom: '10px' }}>
                             Comments
                         </p>
