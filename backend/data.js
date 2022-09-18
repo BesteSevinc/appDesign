@@ -10,7 +10,7 @@ const data = {
             _id: mongoose.Types.ObjectId('62f9ab7fd165e2174d5d285c'),
             name: 'Test User',
             email: 'test@email.com',
-            password: bcrypt.hashSync('test'),
+            password: bcrypt.hashSync('test')
         },
     ],
     listings: [
@@ -21,7 +21,7 @@ const data = {
             slug: 'exploding-kittens',
             description:
                 'Pre-owned game in great condition. Had many fun times playing this with our family. Kids are grown now so the game is not being used anymore. Would love it to go to a new home. This game is suitable for those aged seven and up.',
-            price: 25.00,
+            price: 25.0,
             genre: 'Card',
             difficulty: 'Easy',
             minPlayers: '2',
@@ -39,7 +39,7 @@ const data = {
             slug: 'monopoly-classic',
             description:
                 'Pre-loved game in fair condition. Kids no longer play this so thought we would list it. This is a great family game - hours of fun to be had! A few pieces missing but mostly intact.',
-            price: 15.00,
+            price: 15.0,
             genre: 'Family',
             difficulty: 'Medium',
             minPlayers: '2',
@@ -57,7 +57,7 @@ const data = {
             slug: 'lord-of-the-rings',
             description:
                 'Brand-new game. Bought this as a gift for my nephew, only to find out that he already owns one! Great gift for The Lord of the Rings fans. Suitable for ages 14+',
-            price: 70.00,
+            price: 70.0,
             genre: 'Fantasy',
             difficulty: 'Hard',
             minPlayers: '1',
@@ -74,7 +74,7 @@ const data = {
             title: 'Herd Mentality',
             slug: 'herd-mentality',
             description: 'Great party game! Used only a handful of times - in great condition.',
-            price: 15.00,
+            price: 15.0,
             genre: 'Party',
             difficulty: 'Medium',
             minPlayers: '4',

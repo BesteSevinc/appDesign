@@ -61,7 +61,7 @@ function SingleListingScreen() {
         comment: [{}],
         loadingComments: true,
         loading: true,
-        error: '',
+        error: ''
     });
 
     // get data for listing
@@ -85,7 +85,7 @@ function SingleListingScreen() {
             const comments = await axios.get(`/api/comments/slug/${slug}`);
             dispatch({
                 type: 'FETCH_SUCCESS_COMMENTS',
-                payload: comments.data,
+                payload: comments.data
             });
         } catch (err) {
             dispatch({ type: 'FETCH_FAIL_COMMENTS', payload: err.message });
@@ -121,7 +121,7 @@ function SingleListingScreen() {
                     {
                         _id: slug,
                         user,
-                        theComment,
+                        theComment
                     },
                     {
                         headers: {
@@ -186,10 +186,10 @@ function SingleListingScreen() {
 
                     {/* complete set badge */}
                     {listing.missingPieces === 'no' && <div className="completeSet">Complete Set</div>}
-                    
+
                     {/* seller name */}
                     <div className="userName">Seller: {listing.userName}</div>
-                    
+
                     {/* contact button */}
                     <button className="orange" onClick={showContactInfo} style={{ display: 'block', marginBottom: '20px' }}>
                         Contact Seller

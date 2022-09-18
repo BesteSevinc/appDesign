@@ -3,7 +3,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import { Store } from '../Store';
-import SearchBox from './SearchBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
@@ -45,12 +44,10 @@ function Header() {
             <div className="topContainer">
                 {/* logo */}
                 <div className="logo">
-                    <img src="/images/logoicon.png" />
+                    <img src="/images/logoicon.png" alt="logo"/>
                     <Link to="/">BoardHoard</Link>
                 </div>
                 <div className="topContainer__right">
-                    {/* search box */}
-                    <SearchBox />
                     {/* signup and login links */}
                     <div className="userLinks">
                         {userInfo ? (

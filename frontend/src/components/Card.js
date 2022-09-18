@@ -12,7 +12,7 @@ function Card(props) {
                         <img src={props.listing.image} alt={props.listing.title} />
                     </Link>
                     <Link to={`/listing/${props.listing._id}`}>
-                        <p>{props.listing.title}</p>
+                        <p className="bold">{props.listing.title}</p>
                     </Link>
                     <p>${props.listing.price?.toFixed(2)}</p>
                 </div>

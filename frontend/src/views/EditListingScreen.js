@@ -44,7 +44,7 @@ function EditListingScreen() {
     // use reducer
     const [{ loading, listing }, dispatch] = useReducer(reducer, {
         listing: [],
-        loading: true,
+        loading: true
     });
 
     // fetch the listing
@@ -121,12 +121,12 @@ function EditListingScreen() {
                     fileName,
                     formData,
                     phone,
-                    email,
+                    email
                 },
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',
-                        Authorization: `Bearer ${userInfo.token}`,
+                        Authorization: `Bearer ${userInfo.token}`
                     },
                 }
             );

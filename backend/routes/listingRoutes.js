@@ -14,7 +14,7 @@ dotenv.config();
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
 // for file upload
@@ -72,7 +72,7 @@ listingRouter.post('/postlisting', upload.single('file'), async (req, res) => {
         image: result.secure_url,
         imageid: result.public_id,
         phone: req.body.phone,
-        email: req.body.email,
+        email: req.body.email
     });
 
     const listing = await newListing.save();

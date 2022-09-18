@@ -32,7 +32,7 @@ function BrowseListingsScreen() {
     const [playingTimeActive, setPlayingTimeActive] = useState(false);
 
     const [{ listings }, dispatch] = useReducer(reducer, {
-        listings: [],
+        listings: []
     });
 
     // fetch listings
@@ -70,29 +70,29 @@ function BrowseListingsScreen() {
     const genreData = [
         {
             title: 'Genre',
-            content: [['All'], ['Card'], ['Family'], ['Fantasy'], ['Party'], ['Trivia']],
-        },
+            content: [['All'], ['Card'], ['Family'], ['Fantasy'], ['Party'], ['Trivia']]
+        }
     ];
 
     const difficultyData = [
         {
             title: 'Difficulty',
-            content: [['All'], ['Easy'], ['Medium'], ['Hard']],
-        },
+            content: [['All'], ['Easy'], ['Medium'], ['Hard']]
+        }
     ];
 
     const minPlayersData = [
         {
             title: 'Min Players',
-            content: [['All'], ['1'], ['2'], ['3'], ['4'], ['5']],
-        },
+            content: [['All'], ['1'], ['2'], ['3'], ['4'], ['5']]
+        }
     ];
 
     const playingTimeData = [
         {
             title: 'Playing Time',
-            content: [['All'], ['15 mins'], ['20 mins'], ['30 mins'], ['40 mins'], ['1+ hour']],
-        },
+            content: [['All'], ['15 mins'], ['20 mins'], ['30 mins'], ['40 mins'], ['1+ hour']]
+        }
     ];
 
     return (

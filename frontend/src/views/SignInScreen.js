@@ -23,7 +23,7 @@ function SignInScreen() {
         try {
             const { data } = await axios.post('/api/users/signin', {
                 email,
-                password,
+                password
             });
             ctxDispatch({ type: 'USER_SIGNIN', payload: data });
             localStorage.setItem('userInfo', JSON.stringify(data));
@@ -42,10 +42,15 @@ function SignInScreen() {
                 <input type="email" required onChange={(e) => setEmail(e.target.value)} />
                 <label className="center">Password:</label>
                 <input type="password" required onChange={(e) => setPassword(e.target.value)} />
-                {!pwMatch && <p>Incorrect password. Try again.</p>}
+                {!pwMatch && <p className="error">Incorrect password. Try again.</p>}
                 <button className="blue">Log In</button>
             </form>
-            <p className="small center">Don't have an account? <span className="underline"><Link to="/signup">Sign Up</Link></span></p>
+            <p className="small center">
+                Don't have an account?{' '}
+                <span className="underline">
+                    <Link to="/signup">Sign Up</Link>
+                </span>
+            </p>
         </div>
     );
 }

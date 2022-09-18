@@ -28,6 +28,10 @@ p {
   font-size: 1rem;
 }
 
+.error {
+  color: rgb(255, 40, 40);
+}
+
 /* Headings */
 h1, h2, h3 {
   font-family: 'cooper-black-std', serif;
@@ -134,38 +138,6 @@ header a {
   display: flex;
   justify-content: flex-end;
   width: 70%;
-}
-
-/* Search bar */
-.searchBox {
-  margin-right: 5px;
-  width: 65%;
-}
-
-.searchBox input {
-  width: 70%;
-  outline: 0;
-  padding: 7px 8px;
-  border-radius: 15px;
-  background: transparent;
-  border: 2px solid #ccc;
-  color: #fff;
-  margin: 0 10px 0 0;
-}
-
-.searchBox input::placeholder {
-  color: #f0f0f0;
-  padding: 5px 10px;
-}
-
-.searchBox button {
-  background: #e15931;
-  border: #e15931;
-  color: #fff;
-  outline: none;
-  border-radius: 15px;
-  padding: 8px 20px;
-  margin-right: 15px;
 }
 
 /* Navigation */
@@ -401,7 +373,7 @@ select:focus {
 .featuredCard3Col {
   width: 31%;
   margin-right: 2%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding-bottom: 10px;
   border: 1px solid rgb(204, 204, 204);
 }
@@ -415,14 +387,13 @@ select:focus {
 }
 
 .featuredCard3Col p, .featuredCard4Col p {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
   padding: 5px 13px 0;
 }
 
 .featuredCard5Col p {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .featuredCard3Col img, .featuredCard4Col img {
@@ -549,6 +520,7 @@ form#login label, form#signup label {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  margin-bottom: 60px;
 }
 
 .singleListingCol {
@@ -666,7 +638,7 @@ form#login label, form#signup label {
   background: #f4f4f4;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   border: 1px solid #ccc;
 }
 
@@ -792,16 +764,7 @@ footer p {
 
 /* Media queries */
 
-@media (max-width: 480px) {
-  .searchBox {
-    display: none
-  }
-}
-
 @media (max-width: 699px) {
-  .searchBox input {
-    width: 100px;
-  }
 
   .logo {
     width: 280px;
@@ -853,13 +816,6 @@ footer p {
   .formGroup {
     margin-bottom: 20px;
     margin-right: 0;
-  }
-}
-
-@media (min-width: 580px) and (max-width: 999px) {
-  
-  .searchBox input {
-    width: 120px;
   }
 }
 
@@ -960,14 +916,6 @@ footer p {
 }
 
 @media (max-width: 1000px) {
-  .searchBox {
-    width: auto;
-  }
-
-  .searchBox button {
-    padding: 7px 15px;
-    font-size: 0.9rem;
-  }
 
   .logo {
     font-size: 1rem;

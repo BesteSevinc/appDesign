@@ -18,7 +18,7 @@ userRouter.post('/signin', async (req, res) => {
                 name: user.name,
                 email: user.email,
                 password: user.password,
-                token: generateToken(user),
+                token: generateToken(user)
             });
             return;
         }
@@ -31,14 +31,14 @@ userRouter.post('/signup', async (req, res) => {
     const newUser = new User({
         name: req.body.name,
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password),
+        password: bcrypt.hashSync(req.body.password)
     });
     const user = await newUser.save();
     res.send({
         name: user.name,
         email: user.email,
         password: user.password,
-        token: generateToken(user),
+        token: generateToken(user)
     });
 });
 

@@ -12,11 +12,14 @@ import commentRouter from './routes/commentRoutes.js';
 dotenv.config();
 
 // connect to database
-mongoose.connect(process.env.MONGODB_URI).then(() => {
-    console.log('connected to database');
-}).catch(err => {
-    console.log(err.message);
-});
+mongoose
+    .connect(process.env.MONGODB_URI)
+    .then(() => {
+        console.log('connected to database');
+    })
+    .catch((err) => {
+        console.log(err.message);
+    });
 
 // call the express function and assign to app variable
 const app = express();
@@ -33,7 +36,7 @@ app.use('/api/comments', commentRouter);
 
 // error handling
 app.use((err, req, res, next) => {
-    res.status(500).send({message: err.message});
+    res.status(500).send({ message: err.message });
 });
 
 // define port

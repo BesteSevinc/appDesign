@@ -18,9 +18,8 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
-    const [{ listings, error }, dispatch] = useReducer(reducer, {
-        listings: [],
-        error: '',
+    const [{ listings }, dispatch] = useReducer(reducer, {
+        listings: []
     });
 
     useEffect(() => {
@@ -56,7 +55,7 @@ function HomeScreen() {
                     </p>
                 </div>
                 <div className="featured__right">
-                    <img src="./images/heroimage.jpg" />
+                    <img src="./images/heroimage.jpg" alt="people playing board games" />
                 </div>
             </div>
 
@@ -68,9 +67,9 @@ function HomeScreen() {
                             <img src={listing.image} alt={listing.title} />
                         </Link>
                         <Link to={`/listing/${listing._id}`}>
-                            <p>{listing.title}</p>
+                            <p className="bold">{listing.title}</p>
                         </Link>
-                        <p>${listing.price?.toFixed(2)}</p>
+                        <p className="price">${listing.price?.toFixed(2)}</p>
                     </div>
                 ))}
             </div>

@@ -36,7 +36,7 @@ function ProfileScreen() {
 
     // use reducer
     const [{ listings }, dispatch] = useReducer(reducer, {
-        listings: [],
+        listings: []
     });
 
     // fetch data
@@ -61,11 +61,18 @@ function ProfileScreen() {
     return (
         <main>
             <div className="profileTopBar">
-            <h1><FontAwesomeIcon icon={faUser} className="profilePageIcon" />{userInfo.name}</h1>
-            <Link to="/postlisting"><button className="orange">Create Listing</button></Link>
+                <h1>
+                    <FontAwesomeIcon icon={faUser} className="profilePageIcon" />
+                    {userInfo.name}
+                </h1>
+                <Link to="/postlisting">
+                    <button className="orange">Create Listing</button>
+                </Link>
             </div>
             <div className="profileSubNav">
-                <Link to="/profile"><div className="profileSubNavBtn">Listings</div></Link>
+                <Link to="/profile">
+                    <div className="profileSubNavBtn">Listings</div>
+                </Link>
             </div>
             <div className="dashboardContainer">
                 {filteredListings.map((listing) => (

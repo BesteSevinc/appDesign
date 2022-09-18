@@ -28,7 +28,7 @@ function PostListingScreen() {
 
     // use reducer
     const [{ loading }, dispatch] = useReducer(reducer, {
-        loading: false,
+        loading: false
     });
 
     // use navigate
@@ -105,7 +105,7 @@ function PostListingScreen() {
                     fileName,
                     formData,
                     phone,
-                    email,
+                    email
                 },
                 {
                     headers: {
