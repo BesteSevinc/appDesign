@@ -79,4 +79,46 @@ listingRouter.post('/postlisting', upload.single('file'), async (req, res) => {
     res.status(201).send({ message: 'Listing Posted', listing });
 });
 
+// edit listing
+listingRouter.get('/edit/:slug', async (req, res) => {
+    const listing = await Listing.findOne({ _id: req.params.slug });
+
+    if (listing) {
+        res.send(listing);
+    } else {
+        res.status(404).send({ message: 'Listing not found' });
+    }
+});
+
+listingRouter.put('/editlisting/:slug', upload.single('file'), async (req, res) => {
+    const id = await Listing.findById(req.params.slug);
+
+    const listingToUpdate = await Listing.findById(req.body._id);
+    listingToUpdate.title = req.body.title || listingToUpdate.title;
+    listingToUpdate.description = req.body.description || listingToUpdate.description;
+    listingToUpdate.price = req.body.price || listingToUpdate.price;
+    listingToUpdate.genre = req.body.genre || listingToUpdate.genre;
+    listingToUpdate.difficulty = req.body.difficulty || listingToUpdate.difficulty;
+    listingToUpdate.minPlayers = req.body.minPlayers || listingToUpdate.minPlayers;
+    listingToUpdate.playingTime = req.body.playingTime || listingToUpdate.playingTime;
+    listingToUpdate.missingPieces = req.body.missingPieces || listingToUpdate.missingPieces;
+    listingToUpdate.phone = req.body.phone || listingToUpdate.phone;
+    listingToUpdate.email = req.body.email || listingToUpdate.email;
+
+    if (req.body.fileName !== '') {
+        const image = await cloudinary.uploader.destroy(id.imageid);
+        const result = await cloudinary.uploader.upload(req.file.path);
+
+        listingToUpdate.image = result.secure_url;
+        listingToUpdate.imageid = result.public_id;
+    } else {
+        listingToUpdate.image = listingToUpdate.image;
+        listingToUpdate.imageid = listingToUpdate.imageid;
+    }
+
+    const updatedListing = await listingToUpdate.save();
+
+    res.status(201).send({ message: 'Listing Updated', updatedListing });
+});
+
 export default listingRouter;
