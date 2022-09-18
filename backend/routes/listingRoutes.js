@@ -121,4 +121,13 @@ listingRouter.put('/editlisting/:slug', upload.single('file'), async (req, res) 
     res.status(201).send({ message: 'Listing Updated', updatedListing });
 });
 
+// delete listing
+listingRouter.post('/deletelisting', async (req, res) => {
+    const id = await Listing.findById(req.body.slug);
+    const result = await cloudinary.uploader.destroy(id.imageid);
+    const listing = await Listing.deleteOne({ _id: req.body.slug });
+
+    res.status(201).send({ message: 'Listing Deleted', listing });
+});
+
 export default listingRouter;
