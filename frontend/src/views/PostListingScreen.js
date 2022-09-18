@@ -203,7 +203,7 @@ function PostListingScreen() {
                 <div className="formGroup">
                     <label className="fileLabel" htmlFor="file">
                         Select Image
-                        <input type="file" accept="image/jpg, image/jpeg, image/png, image/gif" name="file" onChange={onFileChange} />
+                        <input required type="file" accept="image/jpg, image/jpeg, image/png, image/gif" name="file" onChange={onFileChange} />
                     </label>
                     <div className="displayImage">
                         <img src={previewImage} alt="preview" />
