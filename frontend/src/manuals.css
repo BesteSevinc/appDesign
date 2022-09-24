@@ -1,0 +1,34 @@
+/* Richards Code */
+
+.manuals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.manuals-listing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.manual-item-wrapper {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background-color: #bbb;
+    color: #fff;
+    padding: 0 .9em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    margin: .5em;
+}
+.manual-item-wrapper p {
+    margin: 1em;
+    font-size: 1.2em;
+}
+.title {
+    font-weight: bold;
+}
