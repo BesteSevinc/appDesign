@@ -1,4 +1,5 @@
 import '../about.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFontAwesome, faDollarSign, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 // Richard's Code
@@ -28,6 +29,9 @@ function AboutUsScreen() {
             <div className="lightBlueBox">
                 <FontAwesomeIcon icon={faDollarSign} size="xl" style={{ color: '#465095', paddingRight: '8px' }} />
                 We do this for the love of games, 100% of earnings go to you, the user!
+            </div>
+            <div className='about-cta'>
+                <p><Link to="/signup">Sign up here</Link> to get started on BoardHoard!</p>
             </div>
         </div>
         </main>
