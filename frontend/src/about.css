@@ -1,0 +1,17 @@
+.about-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.aboutDescription {
+    max-width: 45ch;
+}
+.column-one {
+    width: 50%;
+    margin: 1em 1em 15% 1em;
+}
+.column-two {
+    width: 50%;
+    margin: 1em 1em 15% 1em;
+}
